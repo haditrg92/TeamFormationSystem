@@ -13,6 +13,7 @@
 			<div class="col-lg-12">
 				<a href="index.php?page=student" class="btn btn-primary">List Program of Student</a>
 				<a href="index.php?page=addStudent&idC=<?php echo $row['classID']; ?>" class="btn btn-success">Add Student</a>
+				<a href="index.php?page=addStudentExcel&idC=<?php echo $row['classID']; ?>" class="btn btn-success">Add Student By Excel</a>
 				<br>
 			</div>
 		</div>

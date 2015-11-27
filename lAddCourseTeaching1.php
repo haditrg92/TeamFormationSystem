@@ -36,7 +36,7 @@
 		<br>
 		<div class="row">
 			<div class="col-md-4 col-md-offset-3">
-				<a href="index.php?page=class" class="btn btn-warning">Back</a>
+				<a href="index.php?page=lAddCourseTeaching" class="btn btn-warning">Back</a>
 				<a href="index.php?page=lAddCourseTeaching2&id=<?php echo $row['courseID']; ?>" class="btn btn-success">Add</a>
 			</div>
 		</div>

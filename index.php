@@ -21,7 +21,369 @@ include "database.php";
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Team Formation System</title>
+	<title>
+	<?php
+	$user = $_SESSION['user'];
+	if($user=='admin'){
+		//class
+		if($_GET['page']=='class'){
+			echo "List Class";
+		}
+		elseif($_GET['page']=='allClass'){
+			echo "All Class";
+		}
+		elseif($_GET['page']=='addClass'){
+			echo "Add Class";
+		}
+		elseif($_GET['page']=='addClass1'){
+			echo "Add Class";
+		}
+		elseif($_GET['page']=='viewClass'){
+			echo "View Class";
+		}
+		elseif($_GET['page']=='updateClass'){
+			echo "Update Class";
+		}
+		elseif($_GET['page']=='updateClass1'){
+			echo "Update Class";
+		}
+		elseif($_GET['page']=='deleteClass'){
+			echo "Delete Class";
+		}
+
+		//semester
+		elseif($_GET['page']=='semester'){
+			echo "List Semester";
+		}
+		elseif($_GET['page']=='addSemester'){
+			echo "Add Semester";
+		}
+		elseif($_GET['page']=='addSemester1'){
+			echo "Add Semester";
+		}
+		elseif($_GET['page']=='viewSemester'){
+			echo "View Semester";
+		}
+		elseif($_GET['page']=='updateSemester'){
+			echo "Update Semester";
+		}
+		elseif($_GET['page']=='updateSemester1'){
+			echo "Update Semester";
+		}
+		elseif($_GET['page']=='deleteSemester'){
+			echo "Delete Semester";
+		}
+		elseif($_GET['page']=='currentSemester'){
+			echo "Current Semester";
+		}
+		elseif($_GET['page']=='currentSemester1'){
+			echo "Current Semester";
+		}
+		elseif($_GET['page']=='currentSemester2'){
+			echo "Current Semester";
+		}
+		
+		//course
+		elseif($_GET['page']=='course'){
+			echo "List Course";
+		}
+		elseif($_GET['page']=='addCourse'){
+			echo "Add Course";
+		}
+		elseif($_GET['page']=='addCourse1'){
+			echo "Add Course";
+		}
+		elseif($_GET['page']=='viewCourse'){
+			echo "View Course";
+		}
+		elseif($_GET['page']=='updateCourse'){
+			echo "Update Course";
+		}
+		elseif($_GET['page']=='updateCourse1'){
+			echo "Update Course";
+		}
+		elseif($_GET['page']=='deleteCourse'){
+			echo "Delete Course";
+		}
+		
+		//lecturer
+		elseif($_GET['page']=='lecturer'){
+			echo "List Lecturer";
+		}
+		elseif($_GET['page']=='addLecturer'){
+			echo "Add Lecturer";
+		}
+		elseif($_GET['page']=='addLecturer1'){
+			echo "Add Lecturer";
+		}
+		elseif($_GET['page']=='viewLecturer'){
+			echo "View Lecturer";
+		}
+		elseif($_GET['page']=='updateLecturer'){
+			echo "Update Lecturer";
+		}
+		elseif($_GET['page']=='updateLecturer1'){
+			echo "Update Lecturer";
+		}
+		elseif($_GET['page']=='deleteLecturer'){
+			echo "Delete Lecturer";
+		}
+		elseif($_GET['page']=='resetPassword'){
+			echo "Reset Password";
+		}
+		
+		//student
+		elseif($_GET['page']=='student'){
+			echo "List Class of Student";
+		}
+		elseif($_GET['page']=='student1'){
+			echo "List Student";
+		}
+		elseif($_GET['page']=='addStudent'){
+			echo "Add Student";
+		}
+		elseif($_GET['page']=='addStudent1'){
+			echo "Add Student";
+		}
+		elseif($_GET['page']=='viewStudent'){
+			echo "View Student";
+		}
+		elseif($_GET['page']=='updateStudent'){
+			echo "Update Student";
+		}
+		elseif($_GET['page']=='updateStudent1'){
+			echo "Update Student";
+		}
+		elseif($_GET['page']=='deleteStudent'){
+			echo "Delete Student";
+		}
+		elseif($_GET['page']=='addStudentExcel'){
+			echo "Add Student By Excel";
+		}
+		elseif($_GET['page']=='addStudentExcel1'){
+			echo "Add Student By Excel";
+		}
+
+		//learning
+		elseif($_GET['page']=='learning'){
+			echo "List Learning Style";
+		}
+		elseif($_GET['page']=='addLearning'){
+			echo "Add Learning Style";
+		}
+		elseif($_GET['page']=='addLearning1'){
+			echo "Add Learning Style";
+		}
+		elseif($_GET['page']=='viewLearning'){
+			echo "View Learning Style";
+		}
+		elseif($_GET['page']=='updateLearning'){
+			echo "Update Learning Style";
+		}
+		elseif($_GET['page']=='updateLearning1'){
+			echo "Update Learning Style";
+		}
+		elseif($_GET['page']=='deleteLearning'){
+			echo "Delete Learning Style";
+		}
+
+		//personality
+		elseif($_GET['page']=='personality'){
+			echo "List Personality Type";
+		}
+		elseif($_GET['page']=='addPersonality'){
+			echo "Add Personality Type";
+		}
+		elseif($_GET['page']=='addPersonality1'){
+			echo "Add Personality Type";
+		}
+		elseif($_GET['page']=='viewPersonality'){
+			echo "View Personality Type";
+		}
+		elseif($_GET['page']=='updatePersonality'){
+			echo "Update Personality Type";
+		}
+		elseif($_GET['page']=='updatePersonality1'){
+			echo "Update Personality Type";
+		}
+		elseif($_GET['page']=='deletePersonality'){
+			echo "Delete Personality Type";
+		}
+
+		// homepage
+		elseif($_GET['page']=='homepage'){
+			echo 'Homepage';
+		}
+	}
+	elseif($user=='lecturer'){
+
+		//profile
+		if($_GET['page']=='lProfile'){
+			echo 'Profile';
+		}
+		elseif($_GET['page']=='lProfileUpdate'){
+			echo 'Update Profile';
+		}
+		elseif($_GET['page']=='lProfileUpdate1'){
+			echo 'Update Profile';
+		}
+		elseif($_GET['page']=='lChangePassword'){
+			echo 'Change Password';
+		}
+		elseif($_GET['page']=='lChangePassword1'){
+			echo 'Change Password';
+		}
+		elseif($_GET['page']=='lProfilePic'){
+			echo 'Change Picture Profile';
+		}
+		elseif($_GET['page']=='lProfilePic1'){
+			echo 'Change Picture Profile';
+		}
+
+		//course teaching
+		elseif($_GET['page']=='lCourseTeaching'){
+			echo 'List Course Teaching';
+		}
+		elseif($_GET['page']=='lAddCourseTeaching'){
+			echo 'Add Course Teaching';
+		}
+		elseif($_GET['page']=='lAddCourseTeaching1'){
+			echo 'Add Course Teaching';
+		}
+		elseif($_GET['page']=='lAddCourseTeaching2'){
+			echo 'Add Course Teaching';
+		}
+		elseif($_GET['page']=='lViewCourseTeaching'){
+			echo 'View Course Teaching';
+		}
+		elseif($_GET['page']=='lDeleteCourseTeaching'){
+			echo 'Delete Course Teaching';
+		}
+		elseif($_GET['page']=='lByGroup'){
+			echo 'View List By Group Formation';
+		}
+
+		//group formation
+		elseif($_GET['page']=='lGroupFormation'){
+			echo 'Group Formation';
+		}
+		elseif($_GET['page']=='lViewGroupFormation'){
+			echo 'View List All Group Formation';
+		}
+		elseif($_GET['page']=='lGenerate'){
+			echo 'Generate Group';
+		}
+		elseif($_GET['page']=='lGenerateAHP'){
+			echo 'Generate AHP';
+		}
+
+		//group formation
+		elseif($_GET['page']=='lAnalysis'){
+			echo 'Analysis of Student Performance';
+		}
+		elseif($_GET['page']=='lViewAnalysis'){
+			echo 'View Analysis of Student Performance';
+		}
+		elseif($_GET['page']=='lAnalysisPersonality'){
+			echo 'Analysis Personality Type';
+		}
+		elseif($_GET['page']=='lAnalysisLearning'){
+			echo 'Analysis Learning Style';
+		}
+
+		// homepage
+		elseif($_GET['page']=='homepage'){
+			echo 'Homepage';
+		}
+	}
+
+	elseif($user=='student'){
+		//profile
+		if($_GET['page']=='sProfile'){
+			echo 'Profile';
+		}
+		elseif($_GET['page']=='sProfileUpdate'){
+			echo 'Update Profile';
+		}
+		elseif($_GET['page']=='sProfileUpdate1'){
+			echo 'Update Profile';
+		}
+		elseif($_GET['page']=='sChangePassword'){
+			echo 'Change Password';
+		}
+		elseif($_GET['page']=='sChangePassword1'){
+			echo 'Change Password';
+		}
+		elseif($_GET['page']=='sProfilePic'){
+			echo 'Change Profile Picture';
+		}
+		elseif($_GET['page']=='sProfilePic1'){
+			echo 'Change Profile Picture';
+		}
+
+		// survey
+		elseif($_GET['page']=='surveyLearning'){
+			echo 'Survey Learning Style';
+		}
+		elseif($_GET['page']=='surveyLearning1'){
+			echo 'Answer Survey Learning Style';
+		}
+		elseif($_GET['page']=='surveyLearning2'){
+			echo 'Answer Survey Learning Style';
+		}
+		elseif($_GET['page']=='surveyPersonality'){
+			echo 'Survey Personality Type';
+		}
+		elseif($_GET['page']=='surveyPersonality1'){
+			echo 'Answer Survey Personality Type';
+		}
+		elseif($_GET['page']=='surveyPersonality2'){
+			echo 'Answer Survey Personality Type';
+		}
+
+		//course registered
+		elseif($_GET['page']=='sCourseRegister'){
+			echo 'Course Register';
+		}
+		elseif($_GET['page']=='sAddCourseRegister'){
+			echo 'Add Course Register';
+		}
+		elseif($_GET['page']=='sAddCourseRegister1'){
+			echo 'Add Course Register';
+		}
+		elseif($_GET['page']=='sAddCourseRegister2'){
+			echo 'AddCourseRegister2';
+		}
+		elseif($_GET['page']=='sViewCourseRegister'){
+			echo 'View Course Register';
+		}
+		elseif($_GET['page']=='sDeleteCourseRegister'){
+			echo 'Delete Course Register';
+		}
+
+		//group formation
+		elseif($_GET['page']=='sGroupFormation'){
+			echo 'Group Formation';
+		}
+		elseif($_GET['page']=='sViewGroupFormation'){
+			echo 'View Group Formation';
+		}
+
+		//analysis
+		elseif($_GET['page']=='sAnalysisPersonality'){
+			echo 'Personality Type';
+		}
+		elseif($_GET['page']=='sAnalysisLearning'){
+			echo 'Learning Style';
+		}
+
+		// homepage
+		elseif($_GET['page']=='homepage'){
+			echo 'Homepage';
+		}
+	}
+	?>
+	</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -101,7 +463,6 @@ include "database.php";
 
 		<!-- Page Content -->
 		<?php
-		$user = $_SESSION['user'];
 
 		if(!isset($_GET['page'])){
 			header('Location: index.php?page=homepage');
@@ -240,6 +601,12 @@ include "database.php";
 			}
 			elseif($_GET['page']=='deleteStudent'){
 				include "deleteStudent.php";
+			}
+			elseif($_GET['page']=='addStudentExcel'){
+				include "addStudentExcel.php";
+			}
+			elseif($_GET['page']=='addStudentExcel1'){
+				include "addStudentExcel1.php";
 			}
 
 			//learning
