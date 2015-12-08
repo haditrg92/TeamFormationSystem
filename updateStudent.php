@@ -47,11 +47,11 @@
 			</div><br>
 			<div class="row">
 				<div class="col-lg-3" align="right">
-					<b>Class :</b>
+					<b>Program :</b>
 				</div>
 				<div class="col-lg-4">
 					<select class="form-control" name="class" required>
-						<option value="">-Please Select Class-</option>
+						<option value="">-Please Select Program-</option>
 						<?php
 						$result1 = mysql_query("SELECT * FROM class WHERE status='Active'");
 						$selected = "";

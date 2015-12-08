@@ -27,28 +27,28 @@ include "database.php";
 	if($user=='admin'){
 		//class
 		if($_GET['page']=='class'){
-			echo "List Class";
+			echo "List Program";
 		}
 		elseif($_GET['page']=='allClass'){
-			echo "All Class";
+			echo "All Program";
 		}
 		elseif($_GET['page']=='addClass'){
-			echo "Add Class";
+			echo "Add Program";
 		}
 		elseif($_GET['page']=='addClass1'){
-			echo "Add Class";
+			echo "Add Program";
 		}
 		elseif($_GET['page']=='viewClass'){
-			echo "View Class";
+			echo "View Program";
 		}
 		elseif($_GET['page']=='updateClass'){
-			echo "Update Class";
+			echo "Update Program";
 		}
 		elseif($_GET['page']=='updateClass1'){
-			echo "Update Class";
+			echo "Update Program";
 		}
 		elseif($_GET['page']=='deleteClass'){
-			echo "Delete Class";
+			echo "Delete Program";
 		}
 
 		//semester

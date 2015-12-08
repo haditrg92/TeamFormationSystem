@@ -33,7 +33,7 @@
 									<a href="index.php?page=viewClass&idC='.$row['classID'].'" class="btn btn-primary">View</a>
 									<a href="index.php?page=updateClass&idC='.$row['classID'].'" class="btn btn-info">Update</a>
 									<button class="btn btn-danger" 
-									onclick="if(confirm(\'Are you sure to delete this class?\')) 
+									onclick="if(confirm(\'Are you sure to delete this program?\')) 
 												window.location.href=\'index.php?page=deleteClass&idC='.$row['classID'].'\'">
 									Delete</button>
 									</td>';

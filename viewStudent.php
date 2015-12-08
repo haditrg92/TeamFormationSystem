@@ -72,7 +72,7 @@
 		</div><br>
 		<div class="row">
 			<div class="col-lg-3" align="right">
-				<b>Class :</b>
+				<b>Program :</b>
 			</div>
 			<div class="col-lg-3">
 				<?php echo $row['className']." Batch ".$row['batch']; ?>

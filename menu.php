@@ -19,13 +19,13 @@ if($user=="admin"){
 	<!-- /.nav-second-level -->
 </li>
 <li>
-	<a href="#"><i class="fa fa-group -o fa-fw"></i> Manage Class<span class="fa arrow"></span></a>
+	<a href="#"><i class="fa fa-group -o fa-fw"></i> Manage Program<span class="fa arrow"></span></a>
 	<ul class="nav nav-second-level">
 		<li>
-			<a href="index.php?page=addClass">Add Class</a>
+			<a href="index.php?page=addClass">Add Program</a>
 		</li>
 		<li>
-			<a href="index.php?page=class">View Class</a>
+			<a href="index.php?page=class">View Program</a>
 		</li>
 	</ul>
 	<!-- /.nav-second-level -->
