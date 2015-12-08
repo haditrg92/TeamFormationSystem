@@ -326,7 +326,8 @@
 						$userID = $_SESSION['userID'];
 						$result = mysql_query("SELECT * FROM personality 
 									JOIN semester ON personality.semesterID=semester.semesterID 
-									WHERE personality.studentID='$userID'");
+									WHERE personality.studentID='$userID' 
+							ORDER BY semester.semesterSession DESC, semester.semesterNo DESC");
 						$i = 1;
 						$xx = "";
 

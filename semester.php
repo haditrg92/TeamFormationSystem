@@ -24,7 +24,7 @@
 						</tr>
 						<?php
 						$i = 1;
-						$result = mysql_query("SELECT * FROM semester ORDER BY semesterNo DESC, semesterSession DESC");
+						$result = mysql_query("SELECT * FROM semester ORDER BY semesterSession DESC, semesterNo DESC");
 						while ($row = mysql_fetch_array($result)) {
 							echo "<tr>";
 							echo "<td>$i</td>";

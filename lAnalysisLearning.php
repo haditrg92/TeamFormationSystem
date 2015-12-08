@@ -152,7 +152,7 @@
 						$result1 = mysql_query("SELECT * FROM learning_style 
 												JOIN semester ON semester.semesterID=learning_style.semesterID 
 												WHERE learning_style.studentID='".$_GET['sID']."' 
-												ORDER BY semester.semesterNo DESC, semester.semesterSession DESC");
+												ORDER BY semester.semesterSession DESC, semester.semesterNo DESC");
 						$i = 1;
 						$check = mysql_num_rows($result1);
 						if($check>0){

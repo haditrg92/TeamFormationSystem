@@ -21,7 +21,7 @@
 							JOIN course ON course.courseID=course_lecturer.courseID 
 							JOIN semester ON course_lecturer.semesterID=semester.semesterID 
 							WHERE lecturerID='".$_SESSION['userID']."' 
-							ORDER BY semester.semesterNo DESC, semester.semesterSession DESC");
+							ORDER BY semester.semesterSession DESC, semester.semesterNo DESC");
 						$i = 1;
 						while($row = mysql_fetch_array($result)){
 							echo "<tr>";

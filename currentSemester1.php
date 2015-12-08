@@ -25,7 +25,7 @@
 						$res = mysql_query("SELECT * FROM current_semester JOIN semester ON current_semester.semesterID=semester.semesterID");
 						$ro = mysql_fetch_array($res);
 
-						$result = mysql_query("SELECT * FROM semester ORDER BY semesterNo DESC, semesterSession DESC");
+						$result = mysql_query("SELECT * FROM semester ORDER BY semesterSession DESC, semesterNo DESC");
 						while ($row = mysql_fetch_array($result)) {
 							if($row['semesterID']==$ro['semesterID'])
 								$se = "selected='selected'";

@@ -132,7 +132,8 @@
 						$userID = $_SESSION['userID'];
 						$result = mysql_query("SELECT * FROM learning_style 
 									JOIN semester ON learning_style.semesterID=semester.semesterID 
-									WHERE learning_style.studentID='$userID'");
+									WHERE learning_style.studentID='$userID' 
+							ORDER BY semester.semesterSession DESC, semester.semesterNo DESC");
 						$i = 1;
 						while($row = mysql_fetch_array($result)){
 							echo "<tr>";
