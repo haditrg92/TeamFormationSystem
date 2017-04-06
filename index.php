@@ -20,7 +20,7 @@ include "database.php";
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-
+	<link rel="SHORTCUT ICON" href="images/logo.png" />
 	<title>
 	<?php
 	$user = $_SESSION['user'];

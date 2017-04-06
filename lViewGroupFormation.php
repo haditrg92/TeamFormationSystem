@@ -41,18 +41,28 @@
 		</div><br>
 		<?php
 		$grouping = array();
+		$noGrouping = array();
 
 		$result1 = mysql_query("SELECT * FROM course_student 
 								JOIN student ON student.studentID=course_student.studentID 
-								WHERE course_student.course_lecturer_ID='$CLid' 
+								WHERE course_student.course_lecturer_ID='$CLid' AND groups IS NOT NULL
 								ORDER BY course_student.groups ASC, student.studentName ASC");
 		
 		while($row1 = mysql_fetch_array($result1)):
 			$grouping[$row1['groups']][$row1['studentID']] = $row1['studentName'];
+		endwhile;
+
+		$result1 = mysql_query("SELECT * FROM course_student 
+								JOIN student ON student.studentID=course_student.studentID 
+								WHERE course_student.course_lecturer_ID='$CLid' AND groups IS NULL
+								ORDER BY course_student.groups ASC, student.studentName ASC");
+		
+		while($row1 = mysql_fetch_array($result1)):
+			$noGrouping[$row1['groups']][$row1['studentID']] = $row1['studentName'];
 		endwhile; 
 
 		$i = 1;
-		
+
 		foreach($grouping as $group => $students):
 		?>
 		
@@ -61,6 +71,42 @@
 				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<b>Group <?php echo $i++; ?></b>
+					</div>
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table table-striped table-bordered table-hover">
+								<tr>
+									<th width="50">No</th>
+									<th width="100">Matric No.</th>
+									<th>Name</th>
+								</tr>
+								<?php 
+								$n=1; 
+								foreach($students as $noMatric => $name): 
+								?>
+								<tr>
+									<td><?php echo $n++; ?></td>
+									<td><?php echo $noMatric; ?></td>
+									<td><?php echo $name; ?></td>
+								</tr>
+								<?php endforeach; ?>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php endforeach; 
+
+
+		foreach($noGrouping as $group => $students):
+		?>
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<b>No Group</b>
 					</div>
 					<div class="panel-body">
 						<div class="table-responsive">

@@ -207,7 +207,7 @@ for($i=0; $i<$count; $i++){
 	$studentScore[$calc[$i]["StudentScore"]][$calc[$i]['No Matric']] = $calc[$i]['Name'];
 
 }
-
+// pr($calc); die;
 	// pr($calc);
 	// pr($studentScore);
 

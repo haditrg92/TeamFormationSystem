@@ -49,7 +49,7 @@
 						$check = mysql_num_rows($result);
 						if($check==0){
 							echo "<tr>";
-							echo "<td colspan='4' align='center'><div class='alert alert-danger'>No Course Teaching</div></td>";
+							echo "<td colspan='5' align='center'><div class='alert alert-danger'>No Course Teaching</div></td>";
 							echo "</tr>";
 						}
 						?>

@@ -58,7 +58,7 @@
 			</div><br>
 			<div class="row">
 				<div class="col-lg-3" align="right">
-					<b>Background Education :</b>
+					<b>Education Background :</b>
 				</div>
 				<div class="col-lg-3">
 					<select class="form-control" name="background" required>
@@ -71,7 +71,7 @@
 			</div><br>
 			<div class="row">
 				<div class="col-lg-3" align="right">
-					<b>Class :</b>
+					<b>Program :</b>
 				</div>
 				<div class="col-lg-4">
 					<select class="form-control" name="class" required>

@@ -52,7 +52,7 @@
 		</div><br>
 		<div class="row">
 			<div class="col-lg-3" align="right">
-				<b>Background Education :</b>
+				<b>Education Background :</b>
 			</div>
 			<div class="col-lg-3">
 				<?php echo $row['backgroundEdu']; ?>

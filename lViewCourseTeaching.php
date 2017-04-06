@@ -74,7 +74,7 @@
 								$check = mysql_num_rows($result1);
 								if($check==0){
 									echo "<tr>";
-									echo "<td colspan='2' align='center'><div class='alert alert-danger'>No Student</div></td>";
+									echo "<td colspan='3' align='center'><div class='alert alert-danger'>No Student</div></td>";
 									echo "</tr>";
 								}
 								?>
